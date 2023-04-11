@@ -1,12 +1,18 @@
-const heading = React.createElement("h1", {}, "Hello from Saurabh");
-const heading2 = React.createElement("h2", { id: "heading2" }, "I am h2 tag");
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Hii from Namaste React🚀"
+);
 console.log(heading);
 
-const div1 = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [heading, heading2]),
-  React.createElement("div", { id: "child2" }, [heading, heading2]),
-]);
-console.log(div1);
+// JSX is HTML like syntax not HTML
+// JSX by using Babel transpiles to React.createElement =>React.createElement is JS obj =>
+// When it renders this JS obj get rendered as HTML element
+const jsxHeading = <h1>Hii from Namaste JSX🚀</h1>;
+console.log(jsxHeading);
 
-root.render(div1);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxHeading);
