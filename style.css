@@ -31,13 +31,24 @@
   justify-content: center; */
 }
 
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0 20px; */
+}
+
 /* Cards Start */
 
 .res-card-container {
+  margin: 10px 20px;
   width: 200px;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.res-card-container:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .res-card-container img {
